@@ -1,0 +1,283 @@
+@primary_font: 'Montserrat', sans-serif;
+@primary_color: #df631e;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #ffffff;
+    font-family: @primary_font;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+}
+
+h3,
+h2 {
+    margin: 0;
+}
+
+.main__page {
+    padding: 70px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1C1919;
+    background: url(../img/main__bg.jpg) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__title {
+    margin-bottom: 100px;
+    font-size: 64px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+}
+
+.main__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main__items-inner {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+    .main__items-title {
+        margin-bottom: 10px;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 26px;
+        font-weight: 500;
+    }
+}
+
+.main__items-inner.wow {
+    background: url(../img/wow__main.jpg) center center no-repeat;
+    background-size: 107%;
+}
+
+.main__items-inner.wot {
+    background: url(../img/wot__main.jpg) center center no-repeat;
+    background-size: 107%;
+}
+
+.main__items-inner.caliber {
+    background: url(../img/caliber__main.jpg) center center no-repeat;
+    background-size: 107%;
+}
+
+.main__items-link+.main__items-link {
+    margin-left: 30px;
+}
+
+.main__faq {
+    margin-top: 100px;
+    width: 165px;
+    height: 64px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #f06d0e;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 28px;
+    line-height: 58px;
+}
+
+
+// =====   wow__body   =====
+
+.wow__page,
+.wot__page,
+.caliber__page {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/wow__hp__bg.jpg) center center no-repeat;
+}
+
+.wow__content,
+.wot__content,
+.caliber__content {
+    margin: 0 auto;
+    max-width: 1130px;
+}
+
+.wow__nav,
+.wot__nav,
+.caliber__nav {
+    height: 80px;
+}
+
+.wow__nav-list,
+.wot__nav-list,
+.caliber__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wow__nav-item+.wow__nav-item,
+.wot__nav-item+.wot__nav-item,
+.caliber__nav-item+.caliber__nav-item {
+    margin-left: 25px;
+}
+
+.wow__nav-link,
+.wot__nav-link,
+.caliber__nav-link {
+    font-size: 24px;
+    line-height: 48px;
+}
+
+.wow__page-title,
+.wot__page-title,
+.caliber__page-title {
+    font-size: 64px;
+    margin-bottom: 42px;
+}
+
+.wow__body,
+.wot__body,
+.caliber__body {
+    font-size: 30px;
+}
+
+.wow__content-title,
+.wot__content-title,
+.caliber__content-title {
+    font-style: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.wow__content-link,
+.wot__content-link,
+.caliber__content-link {
+    color: @primary_color;
+}
+
+.wow__content-link2,
+.wot__content-link2,
+.caliber__content-link2 {
+    color: @primary_color;
+    text-transform: uppercase;
+}
+
+.wow__links,
+.wot__links,
+.caliber__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.wow__links-item,
+.wot__links-item,
+.caliber__links-item {
+    width: 460px;
+    height: 55px;
+    background-color: @primary_color;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.wow__links-item,
+.wot__links-item,
+.caliber__links-item {
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 56px;
+}
+
+
+.division {
+    margin-left: 0;
+    width: 70%;
+    height: 6px;
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.scrollpanel .sp-scrollbar {
+    width: 10px;
+    background-color: #ffffff;
+    opacity: .5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scrollpanel {
+    height: 600px;
+    max-width: 1130px;
+}
+
+.scrollpanel .sp-scrollbar .sp-thumb {
+    background-color: @primary_color;
+    border-radius: 5px;
+    transition: height 0.2s ease-in-out;
+}
+
+.scrollpanel .sp-scrollbar.active .sp-thumb {
+    background-color: #999;
+}
+
+
+// #my-accordion {
+//     padding-right: 10%;
+// }
+
+// .toggler {
+//     position: relative;
+//     display: block;
+
+//     padding: 10px;
+//     border: 2px solid #9c7d7d;
+//     border-radius: 5px;
+
+//     &::after {
+//         content: url(../img/arr_down1.svg);
+//         position: absolute;
+//         right: 10px;
+//         top: 40%;
+//     }
+// }
+
+// .accordoin__wrapper {
+//     margin-bottom: 20px;
+// }
+
+// .collapsible {
+//     margin-bottom: 20px;
+//     padding: 10px;
+//     background-color: #ffffff;
+//     color: @primary_color;
+//     border-top: 1px solid @primary_color;
+//     border-radius: 0 0 5px 5px;
+// }
+
+// .jquery-accordion .toggler:hover {
+//     background-color: #ffffff;
+//     color: @primary_color;
+//     border-radius: 5px 5px 0 0;
+
+//     &::after {
+//         content: url(../img/arr_up.svg);
+//         position: absolute;
+//         right: 12px;
+//         top: 30%;
+//     }
+// }

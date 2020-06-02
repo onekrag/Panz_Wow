@@ -78,16 +78,30 @@ h2 {
   font-size: 28px;
   line-height: 58px;
 }
-.wow__page,
-.wot__page,
-.caliber__page {
+.wow__page {
   width: 100vw;
   height: 100vh;
   background: url(../img/wow__hp__bg.jpg) center center no-repeat;
 }
+.wot__page {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/wot__hp__bg.jpg) center center no-repeat;
+}
+.caliber__page {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/caliber__hp__bg.jpg) center center no-repeat;
+}
+.faq__page {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/faq__bg.jpg) center center no-repeat;
+}
 .wow__content,
 .wot__content,
-.caliber__content {
+.caliber__content,
+.faq__content {
   margin: 0 auto;
   max-width: 1130px;
 }
@@ -122,6 +136,7 @@ h2 {
 }
 .wow__body,
 .wot__body,
+.faq__body,
 .caliber__body {
   font-size: 30px;
 }
@@ -158,16 +173,47 @@ h2 {
   height: 55px;
   background-color: #df631e;
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.wow__links-item,
-.wot__links-item,
-.caliber__links-item {
   color: #000000;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
   font-size: 24px;
   line-height: 56px;
+}
+.faq__nav {
+  display: flex;
+}
+.faq__nav-item {
+  width: 355px;
+  height: 170px;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.faq__nav-title {
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 500;
+}
+.faq__nav-link + .faq__nav-link {
+  margin-left: 30px;
+}
+.faq__nav-item.wow {
+  background: url(../img/wow__main.jpg) center center no-repeat;
+  background-size: 107%;
+}
+.faq__nav-item.wot {
+  background: url(../img/wot__main.jpg) center center no-repeat;
+  background-size: 107%;
+}
+.faq__nav-item.caliber {
+  background: url(../img/caliber__main.jpg) center center no-repeat;
+  background-size: 107%;
 }
 .division {
   margin-left: 0;
@@ -187,6 +233,38 @@ h2 {
   height: 600px;
   max-width: 1130px;
 }
+.faq__body .scrollpanel {
+  height: 450px;
+  max-width: 1130px;
+}
+.faq__accordoin-warr {
+  color: #df631e;
+}
+.faq__link {
+  margin: 60px auto 0;
+  width: 165px;
+  height: 65px;
+  background-color: #df631e;
+  position: relative;
+}
+.faq__link a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -15%);
+  width: 100%;
+  height: 100%;
+}
+.faq__link span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-top: 10px solid #222222;
+  border-right: 10px solid #222222;
+  margin-right: 60px;
+  transform: rotate(-45deg);
+  color: #000000;
+}
 .scrollpanel .sp-scrollbar .sp-thumb {
   background-color: #df631e;
   border-radius: 5px;
@@ -194,4 +272,30 @@ h2 {
 }
 .scrollpanel .sp-scrollbar.active .sp-thumb {
   background-color: #999;
+}
+#my-accordion {
+  padding-right: 10%;
+}
+.toggler {
+  position: relative;
+  display: block;
+  padding: 10px;
+  border: 2px solid #9c7d7d;
+  border-radius: 5px;
+}
+.toggler::after {
+  content: url(../img/arr_down1.svg);
+  position: absolute;
+  right: 10px;
+  top: 40%;
+}
+.accordoin__wrapper {
+  margin-bottom: 20px;
+}
+.collapsible {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #9c7d7d;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
 }

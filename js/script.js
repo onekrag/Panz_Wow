@@ -1,32 +1,59 @@
- $(document).ready(function () {
-    
-    $(".scrollpanel").scrollpanel();
+jQuery(document).ready(function ($) {
+   Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, container) {
 
-    $(".scrollpanel").scrollpanel({
-       prefix: 'sp-'
-    });
 
-    $(function () {
-       $("#my-accordion").accordion();
-    });
+      $(".scrollpanel").scrollpanel();
 
-    $('.langrage__box-ru').click(function (event) {
-       $('.slide__descr-ru').addClass('slide__descr-active');
-       $('.slide__descr-eu, .slide__descr-na').removeClass('slide__descr-active');
-       $('.langrage__box-ru').addClass('langrage__box-active');
-       $('.langrage__box-na, .langrage__box-eu').removeClass('langrage__box-active');
-    });
-    $('.langrage__box-eu').click(function (event) {
-       $('.slide__descr-eu').addClass('slide__descr-active');
-       $('.slide__descr-ru, .slide__descr-na').removeClass('slide__descr-active');
-       $('.langrage__box-eu').addClass('langrage__box-active');
-       $('.langrage__box-na, .langrage__box-ru').removeClass('langrage__box-active');
-    });
-    $('.langrage__box-na').click(function (event) {
-       $('.slide__descr-na').addClass('slide__descr-active');
-       $('.slide__descr-ru, .slide__descr-eu').removeClass('slide__descr-active');
-       $('.langrage__box-na').addClass('langrage__box-active');
-       $('.langrage__box-ru, .langrage__box-eu').removeClass('langrage__box-active');
-    });
+      $(".scrollpanel").scrollpanel({
+         prefix: 'sp-'
+      });
 
- })
+      $(function () {
+         $("#my-accordion").accordion();
+      });
+
+
+
+
+
+
+   });
+});
+var FadeTransition = Barba.BaseTransition.extend({
+   start: function () {
+      Promise
+         .all([this.newContainerLoading, this.fadeOut()])
+         .then(this.fadeIn.bind(this));
+   },
+
+   fadeOut: function () {
+
+      return $(this.oldContainer).animate({
+         opacity: 0.5
+      }).promise();
+   },
+
+   fadeIn: function () {
+
+      var _this = this;
+      var $el = $(this.newContainer);
+
+      $(this.oldContainer).hide();
+
+      $el.css({
+         visibility: 'visible',
+         opacity: 0.5
+      });
+
+      $el.animate({
+         opacity: 1
+      }, 300, function () {
+         _this.done();
+      });
+   }
+});
+
+Barba.Pjax.getTransition = function () {
+   return FadeTransition;
+};
+Barba.Pjax.start();

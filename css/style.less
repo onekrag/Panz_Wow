@@ -18,8 +18,17 @@ h2 {
     margin: 0;
 }
 
+.transition-fade {
+    transition: 0.4s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
 .main__page {
-    padding: 70px;
+    padding: 3%;
     width: 100vw;
     height: 100vh;
     background-color: #1C1919;
@@ -36,7 +45,7 @@ h2 {
 }
 
 .main__title {
-    margin-bottom: 100px;
+    margin-bottom: 5%;
     font-size: 64px;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
@@ -49,13 +58,14 @@ h2 {
 }
 
 .main__items-inner {
-    width: 360px;
-    height: 360px;
+    width: 19vw;
+    height: 19vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.6s ease-in-out;
 
     .main__items-title {
         margin-bottom: 10px;
@@ -68,16 +78,70 @@ h2 {
 .main__items-inner.wow {
     background: url(../img/wow__main.jpg) center center no-repeat;
     background-size: 107%;
+
+    &:hover {
+        background-size: 130%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.0);
+        width: 19vw;
+        height: 19vw;
+        transition: 0.6s;
+    }
+
+    &:hover::before {
+        content: '';
+        background: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .main__items-inner.wot {
     background: url(../img/wot__main.jpg) center center no-repeat;
     background-size: 107%;
+
+    &:hover {
+        background-size: 130%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.0);
+        width: 19vw;
+        height: 19vw;
+        transition: 0.6s;
+    }
+
+    &:hover::before {
+        content: '';
+        background: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .main__items-inner.caliber {
     background: url(../img/caliber__main.jpg) center center no-repeat;
     background-size: 107%;
+
+    &:hover {
+        background-size: 130%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.0);
+        width: 19vw;
+        height: 19vw;
+        transition: 0.6s;
+    }
+
+    &:hover::before {
+        content: '';
+        background: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .main__items-link+.main__items-link {
@@ -164,6 +228,29 @@ h2 {
     margin-bottom: 42px;
 }
 
+.wot__page-title.invite,
+.wow__page-title.invite,
+.caliber__page-title.invite,
+.wot__page-title.bonuses,
+.wow__page-title.bonuses,
+.caliber__page-title.bonuses {
+    font-size: 36px;
+    font-weight: 500;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+}
+
+.wot__content-title.invite {
+    font-size: 24px;
+    font-weight: 500;
+    color: #f06d0e;
+    padding: 0 5px;
+    display: inline-block;
+    height: 29px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
 .wow__body,
 .wot__body,
 .faq__body,
@@ -201,6 +288,24 @@ h2 {
     margin-top: 25px;
 }
 
+.wow__links.bonuses,
+.wot__links.bonuses,
+.caliber__links.bonuses {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.wow__links.invite,
+.wot__links.invite,
+.caliber__links.invite {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 25px;
+}
+
 .wow__links-item,
 .wot__links-item,
 .caliber__links-item {
@@ -216,6 +321,66 @@ h2 {
     line-height: 56px;
 }
 
+.wow__links-item.bonuses,
+.wot__links-item.bonuses,
+.caliber__links-item.bonuses {
+    position: relative;
+    width: 65px;
+    height: 55px;
+    margin-right: 60px;
+
+    a {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -22%);
+        width: 100%;
+        height: 100%;
+    }
+
+    span {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-top: 5px solid #222222;
+        border-right: 5px solid #222222;
+        margin-right: 60px;
+        transform: rotate(45deg);
+        color: #000000;
+    }
+
+}
+
+.wow__links-item.invite,
+.wot__links-item.invite,
+.caliber__links-item.invite {
+    position: relative;
+    width: 65px;
+    height: 55px;
+    margin-left: 60px;
+
+    a {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-15%, -22%);
+        width: 100%;
+        height: 100%;
+    }
+
+    span {
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-top: 5px solid #222222;
+        border-right: 5px solid #222222;
+        margin-right: 60px;
+        transform: rotate(-135deg);
+        color: #000000;
+    }
+}
 
 
 // =====   wow__body   =====
@@ -225,24 +390,17 @@ h2 {
 }
 
 .faq__nav-item {
-    width: 355px;
-    height: 170px;
+    width: 18.5vw;
     margin-bottom: 60px;
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
-}
+    transition: all 0.6s ease-in-out;
 
-.faq__nav-title {
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Montserrat;
-    font-size: 26px;
-    font-weight: 500;
 }
-
 
 .faq__nav-link+.faq__nav-link {
     margin-left: 30px;
@@ -251,16 +409,89 @@ h2 {
 .faq__nav-item.wow {
     background: url(../img/wow__main.jpg) center center no-repeat;
     background-size: 107%;
+    height: 18vh;
+    transform: translateY(-80%);
+
+    &:hover {
+        transform: translateY(0);
+    }
+
+    // затемнение
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     background: rgba(0, 0, 0, 0.0);
+    //     width: 360px;
+    //     height: 360px;
+    //     transition: 0.6s;
+    // }
+
+    // &:hover::before {
+    //     content: '';
+    //     background: rgba(0, 0, 0, 0.5);
+    // }
 }
 
 .faq__nav-item.wot {
     background: url(../img/wot__main.jpg) center center no-repeat;
     background-size: 107%;
+    height: 18vh;
+    transform: translateY(-80%);
+
+    &:hover {
+        transform: translateY(0);
+    }
+
+    // затемнение
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     background: rgba(0, 0, 0, 0.0);
+    //     width: 360px;
+    //     height: 360px;
+    //     transition: 0.6s;
+    // }
+
+    // &:hover::before {
+    //     content: '';
+    //     background: rgba(0, 0, 0, 0.5);
+    // }
 }
 
 .faq__nav-item.caliber {
     background: url(../img/caliber__main.jpg) center center no-repeat;
     background-size: 107%;
+    height: 18vh;
+    transform: translateY(-80%);
+
+    &:hover {
+        transform: translateY(0);
+    }
+
+    // затемнение
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     background: rgba(0, 0, 0, 0.0);
+    //     width: 360px;
+    //     height: 360px;
+    //     transition: 0.6s;
+    // }
+
+    // &:hover::before {
+    //     content: '';
+    //     background: rgba(0, 0, 0, 0.5);
+    // }
+}
+
+.faq__nav-title {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: 500;
 }
 
 .division {
@@ -280,13 +511,13 @@ h2 {
 }
 
 .scrollpanel {
-    height: 600px;
+    height: 60vh;
     max-width: 1130px;
 }
 
 .faq__body {
     .scrollpanel {
-        height: 450px;
+        height: 50vh;
         max-width: 1130px;
     }
 }
@@ -294,7 +525,6 @@ h2 {
 .faq__accordoin-warr {
     color: @primary_color;
 }
-
 
 .faq__link {
     margin: 60px auto 0;

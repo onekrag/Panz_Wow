@@ -29,7 +29,7 @@ var FadeTransition = Barba.BaseTransition.extend({
    fadeOut: function () {
 
       return $(this.oldContainer).animate({
-         opacity: 0.5
+         opacity: 0.8
       }).promise();
    },
 
@@ -42,12 +42,12 @@ var FadeTransition = Barba.BaseTransition.extend({
 
       $el.css({
          visibility: 'visible',
-         opacity: 0.5
+         opacity: 0.8,
       });
 
       $el.animate({
          opacity: 1
-      }, 300, function () {
+      }, 800, function () {
          _this.done();
       });
    }

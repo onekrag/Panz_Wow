@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
       prefix: 'sp-'
    });
 
-   // $(function () {
-   //    $("#my-accordion").accordion();
-   // });
+   $(function () {
+      $("#my-accordion").accordion();
+   });
 });

@@ -13,11 +13,11 @@ jQuery(document).ready(function ($) {
 		window.location = linkLocation;
 	}
    
-   $(".scrollpanel").scrollpanel();
+   // $(".scrollpanel").scrollpanel();
 
-   $(".scrollpanel").scrollpanel({
-      prefix: 'sp-'
-   });
+   // $(".scrollpanel").scrollpanel({
+   //    prefix: 'sp-'
+   // });
 
    // $(function () {
    //    $("#my-accordion").accordion();

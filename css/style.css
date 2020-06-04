@@ -448,6 +448,7 @@ html.is-animating .transition-fade {
   position: relative;
   display: block;
   padding: 10px;
+  padding-right: 35px;
   border: 2px solid #9c7d7d;
   border-radius: 5px;
 }
@@ -455,7 +456,7 @@ html.is-animating .transition-fade {
   content: url(../img/arr_down1.svg);
   position: absolute;
   right: 10px;
-  top: 40%;
+  top: 25%;
 }
 .accordoin__wrapper {
   margin-bottom: 20px;

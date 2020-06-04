@@ -154,6 +154,15 @@ html.is-animating .transition-fade {
   height: 100vh;
   background: url(../img/faq__bg.jpg) center center no-repeat;
 }
+.faq__page.wow {
+  background: url(../img/wow__hp__bg.jpg) center center no-repeat;
+}
+.faq__page.wot {
+  background: url(../img/wot__hp__bg.jpg) center center no-repeat;
+}
+.faq__page.caliber {
+  background: url(../img/caliber__hp__bg.jpg) center center no-repeat;
+}
 .wow__content,
 .wot__content,
 .caliber__content,
